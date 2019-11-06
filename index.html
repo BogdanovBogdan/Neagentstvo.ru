@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|IBM+Plex+Serif:300,400,600,700|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	
+	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+	<link rel="stylesheet" href="css/main.css">
+	
+	<link rel="shortcut icon" href="favikon.ico" type="image/x-icon">
+	<title>NeAgentstvo</title>
+</head>
+<body>
+ 
+	<div class="overlay text-center">
+		<div class="modal-form">
+
+			<div class="modal-form__close">&times;</div>
+			<h2 class="modal-form__title">Оставьте заявку <span class="modal-form__title--sub">на крутой и эффективный SMM</span></h2>
+
+			<form action="phpmailer/mail.php" method="POST" class="modal-form__form">
+				<input name="user_name" type="text" class="modal-form__field modal-form__field--name" placeholder="Имя" required>
+				<input name="user_email" type="email" class="modal-form__field" required placeholder="E-mail">
+				<input name="user_tel" type="tel"	placeholder="Номер телефона" class="modal-form__field">
+				<button type="submit" class="button button--gradient modal-form__button">Отправить</button>
+				<div class="privacy-policy">
+					<input id="field" type="checkbox" class="privacy-policy__field" required checked>
+					<label for="field" class="privacy-policy__text">C политикой обработки <a href="privacy-policy.html" class="privacy-policy__link">персональных данных</a> согласен
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<header class="header">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="header__phone d-lg-none">8 (929) 595-62-68</div>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#about">О нас</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#choose_niche">Выбор ниши</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contacts">Контакты</a>
+						</li>
+						<li class="nav-item d-none d-lg-block">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+								<span class="icon-phone-call"></span> +7(929)592-62-68
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+			<div class="row">
+				<div class="col-11 col-md-6">
+						<div class="header__logo"><img src="img/logo.png" alt="" class="header__img"></div>
+						<h2 class="header__text"><span class="header__text--line">Инновационный подход</span> к маркетингу в социальных сетях</h2>
+					<a href="#choose_niche"><button class="header__button button button--gradient">Выбрать нишу</button></a>
+				</div>
+			</div>
+		</div>
+	</header>
+ 	
+ 	<section class="about" id="about">
+		<div class="container-fluid text-center">
+			<div class="title-box">
+				<h1 class="title-box__title about__title circle about__title--circle">О нас</h1>
+				<img src="img/stipple.png" alt="" class="stipple">
+			</div>
+			<!-- /.title-box -->
+			<div class="row about__row">
+				<div class="col-12 col-md-6 col-lg-5 text-left">
+					<div class="about__card about__card--one">
+						<h4 class="about__subtitle circle about__subtitle--circle1 ">Фрилансер - это:</h4>
+						<p class="about__text about__plus">Дешево</p>
+						<p class="about__text about__minus">Некачественно: один человек не может
+						быть хорош и в таргете, и в копирайтинге, и в дизайне, и в маркетинге, и в стратегии</p>
+						<p class="about__text about__minus">Срыв дедлайнов - фрилансеру тяжело
+							в одиночку организовать рабочее время
+						из-за огромного объема задач</p>
+					</div>
+				</div>
+				<!-- /.col-md-6 -->
+				<div class="col-12 col-md-6 offset-lg-2 col-lg-5 text-left">
+					<div class="about__card about__card--two">
+						<h4 class="about__subtitle circle about__subtitle--circle2">Агентство - это:</h4>
+						<p class="about__text about__plus">Над проектом трудится коллектив, где каждый знает свое дело</p>
+						<p class="about__text about__plus">Все KPI и сроки закрепляются договором</p>
+						<p class="about__text about__minus">Цена: дорого или очень дорого. Вы платите наценку &gt; 80% от реальной стоимости услуги всего лишь за слово “Агентство”</p>
+						<p class="about__text about__minus">Отсутствие “прозрачности”. Накрутка, фотошоп в отчете, скрытый рекламный кабинет. Да, и такое часто бывает</p>
+					</div>
+				</div>
+				<!-- /.col-md-6 -->
+				<div class="col-12 col-md-6 text-left">
+					<div class="about__card about__card--three">
+						<h4 class="about__subtitle circle about__subtitle--circle3">Что я предлагаю? NeAgentstvo</h4>
+						<p class="about__text">Проработав 3 года в SMM, я повидала виды: 
+							работа в агентстве - работа на фрилансе, обычный SMMщик - Head of SMM... огромное количество “Но”. Я знаю все о том, как создаются и развиваются страницы ваших брендов в социальных сетях. Вплоть до каждого “подводного камушка”. <br>Провокационно? Да, вполне</p>
+					</div>
+				</div>
+				<!-- /.col-md-6 -->
+			</div>
+		<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /secion.about -->
+
+	<section class="advantages">
+		<div class="container-fluid text-center">
+			<div class="title-box">
+				<h1 class="title-box__title advantages__title d-none d-sm-block">Наши преимущества</h1>
+				<h1 class="title-box__title advantages__title d-sm-none">Преимущества</h1>
+			</div>
+			<!-- /.title-box -->
+			<div class="col-12 advantages__col">
+				<h3 class="advantages__subtitle">Командная работа </h3>
+				<p class="advantages__text advantages__text--wider advantages__text--center">Над вашим проектом будет работать	наикрутейшая команда. Мы выбираем исполнителей на проект, исходя из ниши, поэтому их глаза всегда полны страсти	к вашему бизнесу</p>
+					<img src="img/advantages/advantages-social-media.png" alt="" class="advantages__img">
+			</div>
+			<!-- ./col-12 -->
+			<div class="row advantages__row-one">
+				<div class="col-md-6 col-lg-4 text-lg-right advantages__col--lt">
+					<h3 class="advantages__subtitle">Адекватная стоимость</h3>
+					<p class="advantages__text advantages__text--right">Вы платите как за качественного SMMщика на удаленке - никаких процентов сверху</p>
+				</div>
+				<div class="col-md-6 offset-lg-4 col-lg-4 text-lg-left advantages__col--rt">
+					<h3 class="advantages__subtitle">Мы соблюдаем сроки</h3>
+					<p class="advantages__text">Выполняем KPI, даем гарантии. Тут мы ничем не отличаемся от обычного агентства делаем SMM без факапов и драм</p>
+				</div>
+			</div>
+			<!-- ./row -->
+			<div class="row advantages__row-two">
+				<div class="col-md-6 col-lg-4 text-lg-right advantages__col--lb">
+					<h3 class="advantages__subtitle">Мы универсальны</h3>
+					<p class="advantages__text advantages__text--right advantages__text--maxw">Работаем как с компаниями, так и с агентствами. Мы с радостью внедряемсяв любой проект</p>
+				</div>
+				<div class="col-md-6 offset-lg-4 col-lg-4 text-lg-left advantages__col--rb">
+					<h3 class="advantages__subtitle">Единая коммуникация</h3>
+					<p class="advantages__text advantages__text--maxw">Вся коммуникация происходит через меня, поэтому за результат я отвечаю своей репутацией</p>
+				</div>
+			</div>
+			<!-- ./row -->
+
+			<div class="col-12 advantages__row-three">
+				<h3 class="advantages__subtitle">Максимальная прозрачность</h3>
+				<p class="advantages__text advantages__text--center">Вы видите рекламный кабинет, всю статистику. Мы поможем Вам сэкономить и избежать лишних проблем</p>
+			</div>
+			<!-- ./col-12 -->
+		</div>
+	</section>
+	<!-- ./advantages -->
+	
+	<section class="choose" id="choose_niche">
+		<div class="container-fluid text-center choose__container">
+			<div class="title-box">
+				<h1 class="title-box__title choose__title">Выбери свою нишу</h1>
+			</div>
+			<!-- /.title-box -->
+			<div class="row choose__row">
+				<div class="col-md-4">
+					<div class="choose__card">
+						<a href="#beauty" class="choose__link"></a>
+						<div class="choose__box-img">
+							<img src="img/choose/img1.png" alt="img1" class="choose__img">
+						</div>
+						<h3 class="choose__subtitle">Бьюти:</h3>
+						<p class="choose__text">красота и здоровье, парфюмерия и косметика, услуги и др</p>
+					</div>
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<div class="choose__card">
+						<a href="#food" class="choose__link"></a>
+						<div class="choose__box-img">
+							<img src="img/choose/img2.png" alt="img2" class="choose__img">
+						</div>
+						<h3 class="choose__subtitle">Еда, общепит:</h3>
+						<p class="choose__text">кафе, рестораны, продукты питания, доставка еды, супермаркеты и др</p>
+					</div>
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-4">
+					<div class="choose__card">
+						<a href="#home" class="choose__link"></a>
+						<div class="choose__box-img">
+							<img src="img/choose/img3.png" alt="img1" class="choose__img">
+						</div>
+						<h3 class="choose__subtitle">Дом и ремонт:</h3>
+						<p class="choose__text">посуда и кухня, мебель, дизайн интерьера и др</p>
+					</div>
+				</div>
+				<!-- /.col-md-4 -->
+			</div>
+			<!-- /.row -->
+			<div class="row choose__row">
+				<div class="col-md-6 offset-lg-2 col-lg-4">
+					<div class="choose__card">
+						<a href="#rest" class="choose__link"></a>
+						<div class="choose__box-img">
+							<img src="img/choose/img4.png" alt="" class="choose__img choose__img--bottom">
+						</div>
+						<h3 class="choose__subtitle">Отдых и развлечения:</h3>
+						<p class="choose__text">квесты, кино, торговые и развлекательные центры, парки и др.</p>
+					</div>
+				</div>
+				<!-- /.col-md-6 -->
+				<div class="col-md-6 col-lg-4">
+					<div class="choose__card">
+						<a href="#sport" class="choose__link"></a>
+						<div class="choose__box-img ">
+							<img src="img/choose/img5.png" alt="" class="choose__img">
+						</div>
+						<h3 class="choose__subtitle">Спорт:</h3>
+						<p class="choose__text">фитнес-центры, тренерство, товары для спорта, магазины спортивных товаров и др.</p>
+					</div>
+				</div>
+				<!-- /.col-md-6 -->
+			</div>
+			<!-- /.row -->
+			
+			<form action="phpmailer/mail.php" method="POST" class="choose-form">
+				<div class="form-row align-items-center">
+					<div class="col-lg-3">
+						<div class="choose-form__text">Не нашли свою нишу? <div class="w-100 d-sm-none d-lg-block"></div> Оставьте заявку</div>
+					</div>
+					<div class="col-lg-3">
+						<input required type="text" class="form-control choose-form__input" name="user_name" placeholder="Имя">
+					</div>
+					<div class="col-lg-3">
+						<input required type="email" class="form-control choose-form__input" name="user_email" placeholder="E-mail">
+					</div>
+					<div class="col-lg-3">
+						<button type="submit" class="button button--gradient choose__button ">Оставить заявку</button>
+					</div>
+					<div class="col-12">
+						<div class="privacy-policy privacy-policy--choose">
+							<label class="privacy-policy__text"><input type="checkbox" class="privacy-policy__field" required checked>C политикой обработки <a href="privacy-policy.html" class="privacy-policy__link--choose">персональных данных</a> согласен
+							</label>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- /.container  -->
+	</section>
+
+	<section id="beauty" class="beauty">
+		<div class="container-fluid">
+			<div class="page text-center">
+
+				<div class="title-box">
+					<h1 class="title-box__title beauty__title">Бьюти:</h1>
+				</div>
+				<!-- /.title-box -->
+				<h2 class="page__subtitle page__subtitle--first">Что мы можем предложить?</h2>
+
+				<div class="row page-row">
+					<div class="col-md-6 col-lg-5">
+						<div class="page__desc">
+							<span class="page-icon--yellow page-icon page-icon--up icon-network"></span>
+							<p class="page__text page__text--first">Разработка стратегии продвижения вашего бренда в соц.сетях (Vk, Fb, Inst)</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__desc -->
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-planning"></span>
+							<p class="page__text page__text--first">Разработка контент-плана и рубрикатора</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__desc -->
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-webcam"></span>
+							<p class="page__text page__text--first">Оформление сообществ в соц сетях</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__desc -->
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-creativity"></span>
+							<p class="page__text page__text--first">Креативное текстовое наполнение соц сетей</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__desc -->
+					</div>
+					<!-- /.col-md-6 -->
+
+					<div class="col-md-6 col-lg-7 align-self-center beauty__col">
+						<picture>
+							<source media="(max-width: 991px)" srcset="img/beauty/msg-mobile.png" class="page__img">
+							<img src="img/beauty/msg.png" alt="" class="page__img page__img--first beauty__img">
+						</picture>
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+				<!-- /.row -->
+				
+				<h2 class="page__subtitle page__subtitle--second">Визуальный контент, созданный нашим дизайнером</h2>
+				<!-- /.page__subtitle -->
+				<p class="page__text page__text--second">Визуальный стиль будет ориентирован на ваш сайт <br>и/или брендбук и/или позиционирование</p>
+				<!-- /.page__text -->
+				<img src="img/beauty/img.png" alt="" class="page__img page__img--second">
+
+				<div class="row page-row page-row--plus">
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-group"></span>
+							<p class="page__text page__text--three">Поиск и сотрудничество с блогерами <br>У нас наработанная база из 300 блогеров.Договоримся как на бартер, так и на коммерческие условия</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-md-6 -->
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-target"></span>
+							<p class="page__text page__text--three">Эффективная таргетированная реклама. Продвижение постов, привлечение подписчиков, трафик на сайт</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-md-6 -->
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-camera"></span>
+							<p class="page__text page__text--three">Организация и проведение <br>фотосъемок (по запросу)</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-analytics"></span>
+							<p class="page__text page__text--three">Ежемесячная полная и прозрачная аналитика + отчетность: контент и реклама. Дальнейшие выводы и рекомендации</p>
+							<!-- /.page__text -->
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+				<!-- /.row -->
+				<button class="button page__button button--gradient">Оставить заявку</button>
+			</div>
+			<!-- /.page -->
+		</div>
+	</section>
+	
+	<section id="food" class="food">
+		<div class="container-fluid">
+			<div class="page text-center">
+
+				<div class="title-box black">
+					<h1 class="title-box__title food__title black">Еда и общепит</h1>
+				</div>
+				<h2 class="page__subtitle page__subtitle--first black">Что мы можем предложиь?</h2>
+
+				<div class="row page-row">
+					<div class="col-md-6 col-lg-5">
+
+						<div class="page__desc black">
+							<span class="page-icon page-icon page-icon--up icon-network"></span>
+							<p class="page__text page__text--first">Разработка стратегии продвижения вашего бренда в соц.сетях (Vk, Fb, Inst)</p>
+						</div>
+						<!-- /.page__desc -->
+
+						<div class="page__desc black">
+							<span class="page-icon page-icon page-icon--up icon-planning"></span>
+							<p class="page__text page__text--first">Разработка контент-плана и рубрикатора</p>
+						</div>
+						<!-- /.page__desc -->
+
+						<div class="page__desc black">
+							<spant class="page-icon page-icon page-icon--up icon-webcam"></spant>
+							<p class="page__text page__text--first">Оформление сообществ в соц сетях</p>
+						</div>
+						<!-- /.page__desc -->
+
+						<div class="page__desc black">
+							<span class="page-icon page-icon page-icon--up icon-creativity"></span>
+							<p class="page__text page__text--first">Креативное текстовое наполнение соц сетей</p>
+						</div>
+						<!-- /.page__desc -->
+					</div>
+					<!-- /.col-md-5 -->
+
+					<div class="col-md-6 col-lg-7 align-self-center">
+						<picture>
+							<source media="(max-width: 991px)" srcset="img/food/msg-mobile.jpg" class="page__img">
+							<img src="img/food/msg.png" alt="" class="page__img page__img--first food__img">
+						</picture>
+					</div>
+				</div>
+				<!-- /.row -->
+				
+				<h2 class="page__subtitle page__subtitle--second black">Визуальный контент, созданный нашим дизайнером</h2>
+				<p class="page__text page__text--second black">Визуальный стиль будет ориентирован на ваш сайт <br>и/или брендбук и/или позиционирование</p>
+				<!-- <div class="food__img-box">
+					<img src="img/food/strawberry.png" alt="" class="food__img">
+				</div> -->
+				<img src="img/food/img.png" alt="food-msg" class="page__img page__img--second">
+
+				<div class="row page-row page-row--plus">
+
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-group"></span>
+							<p class="page__text page__text--three">Поиск и сотрудничество с блогерами <br>У нас наработанная база из 300 блогеров. Договоримся как на бартер, так и на коммерческие условия</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-target"></span>
+							<p class="page__text page__text--three">Эффективная таргетированная реклама. Продвижение постов, привлечение подписчиков, трафик на сайт</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-camera"></span>
+							<p class="page__text page__text--three">Организация и проведение <br>фотосъемок (по запросу)</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-analytics"></span>
+							<p class="page__text page__text--three">Ежемесячная полная и прозрачная аналитика + отчетность: контент и реклама. Дальнейшие выводы и рекомендации</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+
+				</div>
+				<!-- /.row -->
+				<button class="button page__button button--gradient">Оставить заявку</button>
+			</div>
+			<!-- /.page -->
+		</div>
+	</section>
+
+	<section id="home" class="home">
+		<div class="container-fluid">
+			<div class="page text-center">
+			
+				<div class="title-box">
+				<h1 class="title-box__title home__title">Дом и ремонт</h1>
+				</div>
+				<h2 class="page__subtitle page__subtitle--first">Что мы можем предложить?</h2>
+			
+				<div class="row page-row align-items-center">
+					<div class="col-md-6 col-lg-5">
+			
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-network"></span>
+							<p class="page__text page__text--first">Разработка стратегии продвижения вашего бренда в соц.сетях (Vk, Fb, Inst)</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-planning"></span>
+							<p class="page__text page__text--first">Разработка контент-плана и рубрикатора</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc">
+							<spant class="page-icon page-icon--yellow page-icon--up icon-webcam"></spant>
+							<p class="page__text page__text--first">Оформление сообществ в соц сетях</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-creativity"></span>
+							<p class="page__text page__text--first">Креативное текстовое наполнение соц сетей</p>
+						</div>
+						<!-- /.page__desc -->
+					</div>
+					<!-- /.col-md-5 -->
+			
+					<div class="col-md-6 col-lg-7 align-self-center">
+						<picture>
+							<source media="(max-width: 991px)" srcset="img/home/msg-mobile.png" class="page__img">
+							<img src="img/home/msg.png" alt="" class="page__img page__img--first home__img">
+						</picture>
+					</div>
+				</div>
+				<!-- /.row -->
+			
+				<h2 class="page__subtitle page__subtitle--second home__subtitle">Визуальный контент, созданный нашим дизайнером</h2>
+				<p class="page__text page__text--second">Визуальный стиль будет ориентирован на ваш сайт <br>и/или брендбук и/или позиционирование</p>
+				<img src="img/home/img.png" alt="home-msg" class="page__img page__img--second">
+			
+				<div class="row page-row page-row--plus">
+			
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-group"></span>
+							<p class="page__text page__text--three">Поиск и сотрудничество с блогерами <br>У нас наработанная база из 300 блогеров. Договоримся как на бартер, так и на коммерческие условия</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-target"></span>
+							<p class="page__text page__text--three">Эффективная таргетированная реклама. Продвижение постов, привлечение подписчиков, трафик на сайт</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-camera"></span>
+							<p class="page__text page__text--three">Организация и проведение <br>фотосъемок (по запросу)</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-analytics"></span>
+							<p class="page__text page__text--three">Ежемесячная полная и прозрачная аналитика + отчетность: контент и реклама. Дальнейшие выводы и рекомендации</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+				</div>
+				<!-- /.row -->
+				<button class="button page__button button--gradient">Оставить заявку</button>
+			</div>
+			<!-- /.page -->
+		</div>
+	</section>
+
+	<section id="sport" class="sport">
+		<div class="container-fluid">
+			<div class="page text-center">
+			
+				<div class="title-box">
+				<h1 class="title-box__title sport__title black">Спорт</h1>
+				</div>
+				<h2 class="page__subtitle page__subtitle--first black">Что мы можем предложить?</h2>
+			
+				<div class="row page-row align-items-center">
+					<div class="col-md-6 col-lg-5">
+			
+						<div class="page__desc black">
+							<span class="page-icon page-icon page-icon--up icon-network"></span>
+							<p class="page__text page__text--first">Разработка стратегии продвижения вашего бренда в соц.сетях (Vk, Fb, Inst)</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc black">
+							<span class="page-icon page-icon page-icon--up icon-planning"></span>
+							<p class="page__text page__text--first">Разработка контент-плана и рубрикатора</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc black">
+							<spant class="page-icon page-icon page-icon--up icon-webcam"></spant>
+							<p class="page__text page__text--first">Оформление сообществ в соц сетях</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc black">
+							<span class="page-icon page-icon page-icon--up icon-creativity"></span>
+							<p class="page__text page__text--first">Креативное текстовое наполнение соц сетей</p>
+						</div>
+						<!-- /.page__desc -->
+					</div>
+					<!-- /.col-md-5 -->
+			
+					<div class="col-md-6 col-lg-7 align-self-center">
+						<picture>
+							<source media="(max-width: 991px)" srcset="img/sport/msg-mobile.jpg" class="page__img">
+							<img src="img/sport/msg.png" alt="" class="page__img page__img--first sport__img">
+						</picture>
+					</div>
+				</div>
+				<!-- /.row -->
+			
+				<h2 class="page__subtitle page__subtitle--second black">Визуальный контент, созданный нашим дизайнером</h2>
+				<p class="page__text page__text--second black">Визуальный стиль будет ориентирован на ваш сайт <br>и/или брендбук и/или позиционирование</p>
+				<img src="img/sport/img.png" alt="sport-msg" class="page__img page__img--second">
+			
+				<div class="row page-row page-row--plus">
+			
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-group"></span>
+							<p class="page__text page__text--three">Поиск и сотрудничество с блогерами <br>У нас наработанная база из 300 блогеров. Договоримся как на бартер, так и на коммерческие условия</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-target"></span>
+							<p class="page__text page__text--three">Эффективная таргетированная реклама. Продвижение постов, привлечение подписчиков, трафик на сайт</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-camera"></span>
+							<p class="page__text page__text--three">Организация и проведение <br>фотосъемок (по запросу)</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-analytics"></span>
+							<p class="page__text page__text--three">Ежемесячная полная и прозрачная аналитика + отчетность: контент и реклама. Дальнейшие выводы и рекомендации</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+				</div>
+				<!-- /.row -->
+				<button class="button page__button button--gradient">Оставить заявку</button>
+			</div>
+			<!-- /.page -->
+		</div>
+	</section>
+
+	<section id="rest" class="rest">
+		<div class="container-fluid">
+			<div class="page text-center">
+			
+				<div class="title-box">
+				<h1 class="title-box__title rest__title">Отдых и развлечения</h1>
+				</div>
+				<h2 class="page__subtitle page__subtitle--first">Что мы можем предложить?</h2>
+			
+				<div class="row page-row">
+					<div class="col-md-6 col-lg-5">
+			
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-network"></span>
+							<p class="page__text page__text--first">Разработка стратегии продвижения вашего бренда в соц.сетях (Vk, Fb, Inst)</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-planning"></span>
+							<p class="page__text page__text--first">Разработка контент-плана и рубрикатора</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc">
+							<spant class="page-icon page-icon--yellow page-icon--up icon-webcam"></spant>
+							<p class="page__text page__text--first">Оформление сообществ в соц сетях</p>
+						</div>
+						<!-- /.page__desc -->
+			
+						<div class="page__desc">
+							<span class="page-icon page-icon--yellow page-icon--up icon-creativity"></span>
+							<p class="page__text page__text--first">Креативное текстовое наполнение соц сетей</p>
+						</div>
+						<!-- /.page__desc -->
+					</div>
+					<!-- /.col-md-5 -->
+			
+					<div class="col-md-6 col-lg-7 align-self-center">
+						<picture>
+							<source media="(max-width: 991px)" srcset="img/rest/msg-mobile.jpg" class="page__img">
+							<img src="img/rest/msg.png" alt="" class="page__img page__img--first rest__img">
+						</picture>
+					</div>
+				</div>
+				<!-- /.row -->
+			
+				<h2 class="page__subtitle page__subtitle--second rest__subtitle">Визуальный контент, созданный нашим дизайнером</h2>
+				<p class="page__text page__text--second rest__text">Визуальный стиль будет ориентирован на ваш сайт <br>и/или брендбук и/или позиционирование</p>
+				<img src="img/rest/img.png" alt="rest-msg" class="page__img page__img--second">
+			
+				<div class="row page-row page-row--plus">
+			
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-group"></span>
+							<p class="page__text page__text--three">Поиск и сотрудничество с блогерами <br>У нас наработанная база из 300 блогеров. Договоримся как на бартер, так и на коммерческие условия</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards">
+							<span class="page-icon icon-target"></span>
+							<p class="page__text page__text--three">Эффективная таргетированная реклама. Продвижение постов, привлечение подписчиков, трафик на сайт</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-camera"></span>
+							<p class="page__text page__text--three">Организация и проведение <br>фотосъемок (по запросу)</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+					<div class="col-sm-6">
+						<div class="page__cards page__cards--mt">
+							<span class="page-icon icon-analytics"></span>
+							<p class="page__text page__text--three">Ежемесячная полная и прозрачная аналитика + отчетность: контент и реклама. Дальнейшие выводы и рекомендации</p>
+						</div>
+						<!-- /.page__cards -->
+					</div>
+					<!-- /.col-sm-6 -->
+			
+				</div>
+				<!-- /.row -->
+				<button class="button page__button button--gradient">Оставить заявку</button>
+			</div>
+			<!-- /.page -->
+		</div>
+	</section>
+
+	<footer id="contacts" class="footer">
+		<div class="container-fluid text-center">
+
+			<div class="title-box">
+				<h1 class="title-box__title footer__title black">Контакты</h1>
+			</div>
+			<h2 class="page__subtitle page__subtitle--first black footer__subtitle footer__subtitle--first">NeAgentstvo <br>Будем рады сотрудничеству с вами!</h2>
+
+			<div class="row">
+				<div class="offset-lg-3 col-lg-6">
+					<div class="footer__subtitle footer__subtitle--white">Кочергина Анастасия <br>руководитель неагентства
+					</div>
+				</div>
+
+				<div class="col-sm-3 col-lg-2">
+					<div class="footer__link-wrap">
+						<a href="https://docs.google.com/document/d/15JSZQ0REW4cCA8URzdmnfiUDcokv9gRPqLQKafnM13k/mobilebasic" class="footer__link">Посмотреть резюме</a>
+					</div>
+				</div>
+
+				<div class="col-sm-9 col-lg-12">
+					<button class="button page__button footer__button button--gradient ">Оставить заявку</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 footer__col pr-lg-0">
+					<div class="footer__wrap">
+						<span class="icon-call-answer footer__icon"></span>
+						<div class="footer__text">8 929 595-62-68</div>
+					</div>
+					<div id="call" class="footer__text footer__text--underline">Заказать звонок</div>
+				</div>
+				<div class="col-lg-6 ">
+					<div class="footer__wrap mt-5 mt-lg-0">
+						<span class="icon-envelope footer__icon"></span>
+						<div class="footer__text">kochergina4work@gmail.com</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<!-- bootstrap scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
